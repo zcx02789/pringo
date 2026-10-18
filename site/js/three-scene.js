@@ -568,7 +568,7 @@ void main(){
     // random resting pitch per can: half show their top (+), half their underside (-); reshuffled on every page load
     const pitchSign = [1, 1, 1, -1, -1, -1].sort(() => Math.random() - .5);
     // highlight picture for the lid (white on black, like the light on a glass sphere); used as a matcap, so it is shared by all the cans
-    const glintUrl = encodeURI('../assets/IMAGE/흑백 유리 구체의 광택 반사.png');
+    const glintUrl = '../assets/IMAGE/glass-sphere-highlight.png';
     const glintTex = new T.TextureLoader().load(glintUrl, undefined, undefined, err => console.error('Lid highlight image failed to load', glintUrl, err));
     glintTex.encoding = T.sRGBEncoding;
     state.cans = FL.map((f, i) => {
